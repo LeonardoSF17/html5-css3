@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardápio Interativo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .item {
+      margin-bottom: 10px;
+    }
+    #total {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cardápio</h1>
+
+  <div class="item">
+    <label><input type="checkbox" class="pedido" value="10"> Hambúrguer - R$10,00</label>
+  </div>
+  <div class="item">
+    <label><input type="checkbox" class="pedido" value="7"> Batata Frita - R$7,00</label>
+  </div>
+  <div class="item">
+    <label><input type="checkbox" class="pedido" value="5"> Refrigerante - R$5,00</label>
+  </div>
+  <div class="item">
+    <label><input type="checkbox" class="pedido" value="12"> Pizza - R$12,00</label>
+  </div>
+  <div class="item">
+    <label><input type="checkbox" class="pedido" value="6"> Suco Natural - R$6,00</label>
+  </div>
+
+  <button onclick="calcularTotal()">Calcular Total</button>
+
+  <div id="total">Total: R$ 0,00</div>
+
+  <script>
+    function calcularTotal() {
+      const pedidos = document.querySelectorAll('.pedido:checked');
+      let total = 0;
+      pedidos.forEach(item => {
+        total += parseFloat(item.value);
+      });
+      document.getElementById('total').textContent = 'Total: R$ ' + total.toFixed(2).replace('.', ',');
+    }
+  </script>
+
+</body>
+</html>
+O que ele faz:
+Mostra uma lista de itens com checkboxes.
+
+Quando o botão "Calcular Total" é clicado, ele soma os valores dos itens selecionados.
+
+Mostra o total na tela.
