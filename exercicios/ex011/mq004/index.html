@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <i id="burguer" class="material-symbols-outlined" onclick="clickmenu()">menu</i>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">opçao1</a></li>
+                <li><a href="#">opçao2</a></li>
+                <li><a href="#">opçao3</a></li>
+                <li><a href="#">opçao4</a></li>
+                <li><a href="#">opçao5</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>testando media query</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime facere at, autem dolorum omnis corporis voluptatum quo animi tempora in et sit cupiditate debitis quasi porro ea amet quidem consequatur asperiores perferendis quaerat nisi eligendi facilis. Omnis quibusdam dolor rem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, eaque similique sapiente dicta quisquam debitis aut deserunt, unde dolorum sunt sit, omnis veniam. Accusamus delectus architecto mollitia libero possimus repudiandae aspernatur facilis autem nam repellendus modi, quisquam facere praesentium ab?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, iste odio! Minima ut quibusdam quod non ea error at, assumenda obcaecati. Quas perferendis cumque, excepturi facere a magnam, veniam, ducimus iste numquam et recusandae repellat. Minima, quam veritatis. Consequuntur, nostrum!</p>
+        </article>
+    </main>
+</body>
+<script>
+    function clickmenu() {
+        if (itens.style.display == 'block') {
+            itens.style.display = 'none'
+        } else {
+            itens.style.display = 'block'
+        }
+    }
+</script>
+</html>
